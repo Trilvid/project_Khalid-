@@ -82,31 +82,28 @@
 
 ARG PHP_VERSION=8.2
 ARG NODE_VERSION=18
-FROM fideloper/fly-laravel:${PHP_VERSION} as base
-
-# PHP_VERSION needs to be repeated here
-ARG PHP_VERSION
+FROM php:${PHP_VERSION}-fpm as base
 
 LABEL fly_launch_runtime="laravel"
 
 # Copy application code, skipping files based on .dockerignore
 COPY . /var/www/html
 
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd
+
 RUN composer install --optimize-autoloader --no-dev \
     && mkdir -p storage/logs \
     && php artisan optimize:clear \
-    && chown -R www-data:www-data /var/www/html \
-    && echo "MAILTO=\"\"\n* * * * * www-data /usr/bin/php /var/www/html/artisan schedule:run" > /etc/cron.d/laravel \
-    && sed -i='' '/->withMiddleware(function (Middleware \$middleware) {/a\
-        \$middleware->trustProxies(at: "*");\
-    ' bootstrap/app.php; \
-    if [ -d .fly ]; then cp .fly/entrypoint.sh /entrypoint; chmod +x /entrypoint; fi;
+    && chown -R www-data:www-data /var/www/html
 
 # Multi-stage build: Build static assets
 # This allows us to not include Node within the final container
 FROM node:${NODE_VERSION} as node_modules_go_brrr
-
-RUN mkdir /app
 
 WORKDIR /app
 COPY . .
@@ -135,10 +132,9 @@ RUN if [ -f "vite.config.js" ]; then \
     fi;
 
 # From our base container created above, we create our final image, adding in static assets that we generated above
-FROM base
+FROM php:${PHP_VERSION}-fpm
 
-# Packages like Laravel Nova may have added assets to the public directory or maybe some custom assets were added manually!
-# Either way, we merge in the assets we generated above rather than overwrite them
+COPY --from=base /var/www/html /var/www/html
 COPY --from=node_modules_go_brrr /app/public /var/www/html/public-npm
 RUN rsync -ar /var/www/html/public-npm/ /var/www/html/public/ \
     && rm -rf /var/www/html/public-npm \
@@ -147,3 +143,5 @@ RUN rsync -ar /var/www/html/public-npm/ /var/www/html/public/ \
 RUN mv /var/www/html/storage /var/www/html/storage_
 
 EXPOSE 8080
+
+CMD ["php-fpm"]
