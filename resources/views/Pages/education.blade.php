@@ -109,7 +109,7 @@
                                     
                                     <h4>Still have questions? Get in touch with us</h4>
                                     
-                                    <p>Get help from our online customer support chat or email us at support@transcendtrade.org to request a callback. We'll contact you within an hour (during customer support operating hours).</p>
+                                    <p>Get help from our online customer support chat or email us at info.transcendtrade@gmail.com to request a callback. We'll contact you within an hour (during customer support operating hours).</p>
                               
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
                                     <h4>When will my money reach my Moon Pro Trade account?</h4>
                                     <p>Your deposit is reflected in your account as soon as you confirm the payment. The money on the bank account is reserved, and then immediately displayed on the platform and in your Moon Pro Trade account.</p>
                                     <h4>My payment was declined. What should I do?</h4>
-                                    <p>Various factors could result in this issue. Please email us at support@transcendtrade.org or contact our Customer support team via online chat with as many details as you can about the issue. We'll try to resolve it as soon as we can.</p>
+                                    <p>Various factors could result in this issue. Please email us at info.transcendtrade@gmail.com or contact our Customer support team via online chat with as many details as you can about the issue. We'll try to resolve it as soon as we can.</p>
                                     <h4>Account types</h4>
                                     <p>Your account type is determined by the total of deposits and the real trading volume. Upgrade your account by topping up and being active on the platform. We don't charge fees for keeping your account type. It stays with you for unlimited time.</p>
                                 </div>
@@ -193,7 +193,7 @@
                                     <p>We strive to reduce the processing period to the shortest possible time. The waiting time depends on your account type, information about which you can find at the link.Please note that the application is considered only during the working hours of the platform's financial department. Working hours of the finance department: 09:00–22:00 (GMT+3) from Monday to Friday. In a limited mode, we process some applications on weekends. If the application was submitted outside the working hours of the finance department, it will be processed at the beginning of the next working day.</p>
                                     <h4>A withdrawal policy</h4>
                                     <p>transcendtrade Trade cares about your security. That's why verification is mandatory for submitting a withdrawal request. It is a guarantee that your funds won't become fraud or money laundering target.</p>
-                                    <p>We transfer money only to the bank accounts that were previously used to fund your Moon Pro Trade account. In the event that the original funding account is no longer available or you topped up your account with several payment methods, please, contact our Customer support team via online chat or email us at support@transcendtrade.org with a detailed description of the issue.</p>
+                                    <p>We transfer money only to the bank accounts that were previously used to fund your Moon Pro Trade account. In the event that the original funding account is no longer available or you topped up your account with several payment methods, please, contact our Customer support team via online chat or email us at info.transcendtrade@gmail.com with a detailed description of the issue.</p>
                                     <h4>How to get verified</h4>
                                     <p>Verification is mandatory for withdrawals. You must verify your Id and the payment methods you use to deposit funds to your account.</p>
                                     <p>First, make sure all the personal data fields in your profile are filled out. Then go to the Verification section and follow the instructions. Please don't conceal or touch up parts of the scans or photos except for those mentioned in the instructions.</p>
@@ -394,7 +394,7 @@
                           <li><i class="fa fa-map-marker"></i><strong>Address</strong> Street No:4 , Robert villsan road  </li>
                           <li><i class="fa fa-fax"></i><strong>FAX</strong>(082) 634-3456</li>
                           <li><i class="fa fa-phone"></i><strong>phone</strong>0800-987654 (help 24/7 )</li>
-                          <li><i class="fa fa-envelope"></i><strong>email</strong>support@transcendtrade.org</li>
+                          <li><i class="fa fa-envelope"></i><strong>email</strong>info.transcendtrade@gmail.com</li>
                         </ul>
                     </div>
                 

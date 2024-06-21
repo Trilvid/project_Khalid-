@@ -903,7 +903,7 @@
                                 <div class="text-center">
                                     <h3 class="text-uppercase font-weight-500 text-white">Contact Us</h3>
                                     <p class="text-white">Having any issue?.</p>
-                                    <h4 class="text-secondry">support@transcendtrade.org</h4>
+                                    <h4 class="text-secondry">info.transcendtrade@gmail.com</h4>
                                 </div>                               
                             </div>                                
                         </div>

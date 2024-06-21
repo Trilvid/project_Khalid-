@@ -64,7 +64,7 @@
                            </div>
                            <div class="icon-content text-black">
                                <h5 class="wt-tilte text-uppercase">Email</h5>
-                               <p>demo@gmail.com</p>
+                               <p>info.transcendtrade@gmail.com</p>
                            </div>
                        </div>
                    </div>

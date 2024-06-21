@@ -60,7 +60,7 @@
                                                     <i>
                                                         Thank you,<br />
                                                         transcendtrade ® <br />
-                                                        <a href="mailto:support@transcendtrade.org" style="color: #ffffff;" target="_blank"><font color="#ffffff">support@transcendtrade.org</font></a>
+                                                        <a href="mailto:info.transcendtrade@gmail.com" style="color: #ffffff;" target="_blank"><font color="#ffffff">info.transcendtrade@gmail.com</font></a>
                                                     </i>
                                                 </td>
                                             </tr>

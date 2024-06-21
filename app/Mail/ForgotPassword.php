@@ -28,7 +28,7 @@ class ForgotPassword extends Mailable
     {
         return new Envelope(
             subject: 'Password recovery',
-            from: new Address('noreply@transcendtrade.org', 'transcendtrade.org'),
+            from: new Address('info.transcendtrade@gmail.com', 'transcendtrade.org'),
         );
     }
 

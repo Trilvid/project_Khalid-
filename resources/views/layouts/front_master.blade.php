@@ -83,7 +83,7 @@
                         <div class="clearfix">
                             <div class="wt-topbar-left">
                                 <ul class="list-unstyled e-p-bx pull-left">
-                                    <li><i class="fa fa-envelope"></i>support@transcendtrade.org</li>
+                                    <li><i class="fa fa-envelope"></i>info.transcendtrade@gmail.com</li>
                                     <li><i class="fa fa-phone"></i>+1 (805) 612‑7315</li>
                                 </ul>
                             </div>

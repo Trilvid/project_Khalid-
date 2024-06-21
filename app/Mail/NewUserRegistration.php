@@ -32,7 +32,7 @@ class NewUserRegistration extends Mailable
             // bcc: new Address('chukwujidesmond3376@gmail.com', 'A1options.com'),
             subject: 'Email Verification',
             // from: 'noreply@a1options.com',
-            from: new Address('noreply@transcendtrade.org', 'transcendtrade.org'),
+            from: new Address('info.transcendtrade@gmail.com', 'transcendtrade.org'),
             // bcc: [new Address('chukwujidesmond3376@gmail.com', 'Example Name')],
         );
  
