@@ -15,7 +15,7 @@ services:
       - APP_ENV=production
       - APP_DEBUG=false
     ports:
-      - "80:80"
+      - "8000:8000"
     depends_on:
       - mysql
   mysql:
