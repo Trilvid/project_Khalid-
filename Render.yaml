@@ -1,29 +1,29 @@
-services:
-  - type: web
-    name: transcendtrade
-    env: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    buildCommand: composer install && php artisan key:generate
-    startCommand: php-fpm
-    envVars:
-      - key: APP_ENV
-        value: production
-      - key: APP_KEY
-        value: APP_KEY
-      - key: APP_DEBUG
-        value: false
-      - key: APP_URL
-        value: https://transcendtrade.org
-      - key: DB_CONNECTION
-        value: DB_CONNECTION
-      - key: DB_HOST
-        value: DB_HOST
-      - key: DB_PORT
-        value: DB_PORT
-      - key: DB_DATABASE
-        value: DB_DATABASE
-      - key: DB_USERNAME
-        value: DB_USERNAME
-      - key: DB_PASSWORD
-        value: DB_PASSWORD
+# services:
+#   - type: web
+#     name: transcendtrade
+#     env: docker
+#     plan: free
+#     dockerfilePath: ./Dockerfile
+#     buildCommand: composer install && php artisan key:generate
+#     startCommand: php-fpm
+#     envVars:
+#       - key: APP_ENV
+#         value: production
+#       - key: APP_KEY
+#         value: APP_KEY
+#       - key: APP_DEBUG
+#         value: false
+#       - key: APP_URL
+#         value: https://transcendtrade.org
+#       - key: DB_CONNECTION
+#         value: DB_CONNECTION
+#       - key: DB_HOST
+#         value: DB_HOST
+#       - key: DB_PORT
+#         value: DB_PORT
+#       - key: DB_DATABASE
+#         value: DB_DATABASE
+#       - key: DB_USERNAME
+#         value: DB_USERNAME
+#       - key: DB_PASSWORD
+#         value: DB_PASSWORD
