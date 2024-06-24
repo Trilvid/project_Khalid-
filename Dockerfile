@@ -77,9 +77,11 @@
 
 # EXPOSE 8080
 
-
 # Use the official PHP image as a base image
-FROM php:8.1-fpm
+FROM php:8.1-fpm 
+
+# Install Nginx
+RUN apt-get update && apt-get install -y nginx
 
 # Set working directory
 WORKDIR /var/www
@@ -124,10 +126,10 @@ RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/bootstrap/cache
 
 # Copy the nginx configuration file to the container
-COPY .docker/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY docker/nginx.conf /etc/nginx.conf
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8000
 
-# Start supervisord
-CMD ["php-fpm"]
+# Start Nginx and PHP-FPM
+CMD service nginx start && php-fpm
