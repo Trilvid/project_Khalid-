@@ -73,63 +73,6 @@ RUN rsync -ar /var/www/html/public-npm/ /var/www/html/public/ \
     && rm -rf /var/www/html/public-npm \
     && chown -R www-data:www-data /var/www/html/public
 
-RUN mv /var/www/html/storage /var/www/html/storage
+RUN mv /var/www/html/storage /var/www/html/storage_
 
 EXPOSE 8080
-
-# # Use the official PHP image as a base image
-# FROM php:8.1-fpm 
-
-# # Install Nginx
-# RUN apt-get update && apt-get install -y nginx
-
-# # Set working directory
-# WORKDIR /var/www
-
-# # Install system dependencies
-# RUN apt-get update && apt-get install -y \
-#     git \
-#     curl \
-#     libpng-dev \
-#     libjpeg62-turbo-dev \
-#     libfreetype6-dev \
-#     locales \
-#     zip \
-#     unzip \
-#     nano \
-#     libonig-dev \
-#     libxml2-dev \
-#     libzip-dev \
-#     npm
-
-# # Clear cache
-# RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# # Install PHP extensions
-# RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
-
-# # Install Composer
-# COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# # Copy existing application directory contents
-# COPY . /var/www
-
-# # Install Laravel PHP dependencies
-# RUN composer install --optimize-autoloader --no-dev
-
-# # Install Node.js dependencies
-# RUN npm install && npm run prod
-
-# # Set permissions for Laravel
-# RUN chown -R www-data:www-data /var/www \
-#     && chmod -R 755 /var/www/storage \
-#     && chmod -R 755 /var/www/bootstrap/cache
-
-# # Copy the nginx configuration file to the container
-# COPY docker/nginx.conf /etc/nginx.conf
-
-# # Expose port 80
-# EXPOSE 8000
-
-# # Start Nginx and PHP-FPM
-# CMD service nginx start && php-fpm
