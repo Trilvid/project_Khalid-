@@ -73,6 +73,6 @@ RUN rsync -ar /var/www/html/public-npm/ /var/www/html/public/ \
     && rm -rf /var/www/html/public-npm \
     && chown -R www-data:www-data /var/www/html/public
 
-RUN mv /var/www/html/storage /var/www/html/storage
+RUN mv /var/www/html/storage /var/www/html/storage_
 
 EXPOSE 8080
