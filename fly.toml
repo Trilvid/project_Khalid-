@@ -1,0 +1,42 @@
+# fly.toml app configuration file generated for sega-stone-estate on 2024-05-24T22:35:25+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'transcendtrade'
+primary_region = 'lhr'
+console_command = 'php /var/www/html/artisan tinker'
+
+[build]
+  [build.args]
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.2'
+
+[env]
+  APP_ENV = 'production'
+  LOG_CHANNEL = 'stderr'
+  LOG_LEVEL = 'info'
+  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
+  SESSION_DRIVER = 'cookie'
+  SESSION_SECURE_COOKIE = 'true'
+  DB_CONNECTION='mysql'
+  DB_HOST='mysql-f0dddea-trilvid234-4746.e.aivencloud.com'
+  DB_PORT=19327
+  DB_DATABASE='defaultdb'
+  DB_USERNAME='avnadmin'
+  DB_PASSWORD='AVNS_NZwDmZaZgiuIEfQEaSU'
+
+[http_service]
+  internal_port = 8181
+  force_https = true
+  auto_stop_machines = false
+  processes = ['app']
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[mounts]
+  source="sega_stone_estate_vol"
+  destination="/var/www/html/storage"
