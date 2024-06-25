@@ -1,32 +1,27 @@
-# fly.toml app configuration file generated for sega-stone-estate on 2024-05-24T22:35:25+01:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'transcendtrade'
-primary_region = 'lhr'
-console_command = 'php /var/www/html/artisan tinker'
+app = "transcendtrade"
 
 [build]
-  [build.args]
-    NODE_VERSION = '18'
-    PHP_VERSION = '8.2'
+  dockerfile = "./Dockerfile"
 
 [env]
-  APP_ENV = 'production'
-  LOG_CHANNEL = 'stderr'
-  LOG_LEVEL = 'info'
-  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
-  SESSION_DRIVER = 'cookie'
-  SESSION_SECURE_COOKIE = 'true'
-  DB_CONNECTION='mysql'
+  APP_ENV = "production"
+  APP_KEY = "base64:FdQZzeSEJA6c2WAPbQizzfLONkyf3pcgilh/6cXsyeg="
+  APP_DEBUG = "false"
 
-[http_service]
-  internal_port = 8181
-  force_https = true
-  auto_stop_machines = false
-  processes = ['app']
+[experimental]
+  auto_rollback = true
 
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
 [[vm]]
   memory = '256mb'
   cpu_kind = 'shared'
