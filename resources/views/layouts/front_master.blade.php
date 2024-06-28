@@ -16,6 +16,7 @@
 	<meta property="og:description" content="<strong>Transcendtrade</strong> : Crypto, Forex, bond Trading" />
 	<meta property="og:image" content="{{asset('assets/back/images/easypro.png')}}" />
 	<meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
     <!-- FAVICONS ICON -->
     <link rel="icon" href="#" type="image/x-icon" />

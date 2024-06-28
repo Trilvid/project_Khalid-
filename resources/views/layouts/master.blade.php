@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{asset('assets/back/images/easypro.png')}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     @yield('title')
     

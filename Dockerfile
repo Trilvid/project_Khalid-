@@ -243,4 +243,16 @@ RUN mv /var/www/html/storage /var/www/html/storage_ \
 # Ensure the web server serves the public directory correctly
 RUN chown -R www-data:www-data /var/www/html/public
 
+# Copy the entrypoint script
+COPY .fly/entrypoint.sh /entrypoint.sh
+
+# Ensure the entrypoint script is executable
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 8080
+
+# Set the entrypoint
+ENTRYPOINT ["/entrypoint.sh"]
+
+# Run the default command
+CMD ["php-fpm"]
