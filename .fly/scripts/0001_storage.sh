@@ -14,3 +14,5 @@ cp -r /var/www/html/storage_/. /var/www/html/storage/
 echo "deleting storage_..."
 rm -rf /var/www/html/storage_
 php artisan storage:link
+
+ls -lah /var/www/html/storage
