@@ -9,15 +9,11 @@ FOLDER=/var/www/html/storage/app
 #     rm -rf /var/www/html/storage_
 # fi
 
-
-find /var/www/html/storage
-echo --------------------
-
 cp -r /var/www/html/storage_/. /var/www/html/storage/
 echo "deleting storage_..."
 rm -rf /var/www/html/storage_
 php artisan storage:link
 
-find /var/www/html/storage
+find /var/www/html/public
 echo --------------------
 
