@@ -110,7 +110,7 @@ class RegisterController extends Controller
             $NewUser->fullname = $request->fullname;
             $NewUser->email = $request->email;
             $NewUser->password = bcrypt($request->password);
-            $NewUser->role = 'admin';
+            $NewUser->role = 'member';
             $NewUser->is_active = true;
             
             $NewUser->token = $userGeneratedID;
