@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="#">
 
-    <title>EasyPro </title>
+    <title>Transcendtrade</title>
   
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{asset('assets/back/css/vendors_css.css')}}">
