@@ -76,7 +76,7 @@ class RegisterController extends Controller
      */
     protected function create(Request $request)
     {
-        
+
         try {
             $validator = Validator::make(
                 $request->all(),
@@ -84,7 +84,7 @@ class RegisterController extends Controller
                     'fullname' => 'required', 'string', 'max:255',
                     'email' => 'required|email', 'string', 'email', 'max:255', 'unique:users',
                     'password' => 'required',
-                    'cpassword' => 'required|same:password', 
+                    'cpassword' => 'required|same:password',
                 ]
             );
 
@@ -94,7 +94,7 @@ class RegisterController extends Controller
                 return redirect()->back();
             }
 
-          
+
             $user = User::where('email', $request->email)->first();
             if($user){
                 $message = 'User Email Already Exist.';
@@ -112,7 +112,7 @@ class RegisterController extends Controller
             $NewUser->password = bcrypt($request->password);
             $NewUser->role = 'member';
             $NewUser->is_active = true;
-            
+
             $NewUser->token = $userGeneratedID;
 
             // $body = [
@@ -121,11 +121,11 @@ class RegisterController extends Controller
             // ];
             // // dd($body);
             // Mail::to($NewUser->email)->bcc('support@uyyuu.com')->send(new NewUserRegistration($body));
-            
-            
+
+
             $NewUser->save();
 
-            
+
             // return response()->json([
             //     'user' => $NewUser,
             //     'message' => "User was created successfully"
@@ -137,7 +137,7 @@ class RegisterController extends Controller
         } catch (\Exception $error) {
             Log::info('create@RegisterController error message: ' . $error->getMessage());
             $message = 'Unable to Create user. Encountered an error.';
-            
+
             Session::put('errorMessage', $message);
             // return Redirect::to(route('auth.register'));
             return redirect()->back();

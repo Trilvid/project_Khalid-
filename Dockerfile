@@ -56,8 +56,9 @@ RUN if [ -f "vite.config.js" ]; then \
         npm ci --no-audit; \
         npm run $ASSET_CMD; \
     else \
-        npm install; \
-        npm run $ASSET_CMD; \
+        corepack enable && corepack prepare pnpm@latest-8 --activate; \
+        pnpm install --frozen-lockfile; \
+        pnpm run $ASSET_CMD; \
     fi;
 
 # From our base container created above, we
@@ -72,8 +73,6 @@ COPY --from=node_modules_go_brrr /app/public /var/www/html/public-npm
 RUN rsync -ar /var/www/html/public-npm/ /var/www/html/public/ \
     && rm -rf /var/www/html/public-npm \
     && chown -R www-data:www-data /var/www/html/public
-
-RUN mv /var/www/html/storage /var/www/html/storage_
 
 EXPOSE 8080
 
