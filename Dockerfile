@@ -56,8 +56,9 @@ RUN if [ -f "vite.config.js" ]; then \
         npm ci --no-audit; \
         npm run $ASSET_CMD; \
     else \
-        npm install; \
-        npm run $ASSET_CMD; \
+        corepack enable && corepack prepare pnpm@latest-8 --activate; \
+        pnpm install --frozen-lockfile; \
+        pnpm run $ASSET_CMD; \
     fi;
 
 # From our base container created above, we
