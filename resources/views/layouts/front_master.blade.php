@@ -386,7 +386,10 @@
     }
     </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="//code.tidio.co/uqepgovjdhbgv2ehzonuuh97ratzwbxx.js" async></script>
+
+	<!-- this space is for chatbot for customer support -->
+	<script src="//code.jivosite.com/widget/9ZzTZxCvnr" async></script>
+<!-- <script src="//code.tidio.co/uqepgovjdhbgv2ehzonuuh97ratzwbxx.js" async></script> -->
 
 @yield('scripts')
 

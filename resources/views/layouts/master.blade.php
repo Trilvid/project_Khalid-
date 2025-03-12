@@ -360,7 +360,10 @@
     <script src="{{asset('assets/vue.js')}}"></script>
     <script src="{{asset('assets/axios.js')}}"></script>
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-	<script src="//code.tidio.co/vbo09yd8ipa1vz63r8szciizgykq693v.js" async></script>
+	
+	<!-- this space is for chatbot for customer support -->
+	<script src="//code.jivosite.com/widget/9ZzTZxCvnr" async></script>
+	<!-- <script src="//code.tidio.co/vbo09yd8ipa1vz63r8szciizgykq693v.js" async></script> -->
     @yield('scripts')
 	
 </body>
